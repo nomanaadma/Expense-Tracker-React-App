@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.Expense-Tracker-App {
+	width: 500px;
+	margin: 50px auto;
+	background-color: #f3f5f8;
+	box-shadow: 0 1px 15px 1px rgba(62, 57, 107, .07);
+    border: 1px solid #efefef;
+	border-radius: 36px;
+	padding: 30px 30px 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.expense-container {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #fff;
+	box-shadow: 0 0px 7px #00000017;
+	border-radius: 5px;
+	margin: 20px 0;
+	padding: 12px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.expense-container h6 {
+	color: #bababa;
+    font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.expense-container .income_amount {
+	color: #61bf68;
 }
 
-.App-link {
-  color: #61dafb;
+.expense-container .expense_amount {
+	color: #f65d5d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense-container .divider {
+	background-color: #f2f2f2;
+    width: 2px;
 }
+
+.fz-40 {
+	font-size: 40px;
+}
+
+.history .list-group {
+	box-shadow: 0 0px 7px #00000017;
+	border-radius: 5px;
+}
+
+.history .expense-list {
+	border-right: 5px solid #cc0000;
+}
+
+.history .income-list {
+	border-right: 5px solid #008000;
+}
+
+.history .list-group-item {
+	font-size: 14px;
+	position: relative;
+}
+
+.history .list-group-item span.list-amount {
+	float: right;
+	font-weight: bold;
+}
+
+.history .list-group-item i.delete {
+	display: none;
+    position: absolute;
+    background: #cc0000;
+    color: #fff;
+    padding: 0 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    left: -18px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.history .list-group-item:hover i.delete {
+	display: block;
+}
+
