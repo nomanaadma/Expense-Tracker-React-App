@@ -5,7 +5,7 @@ function History() {
 
 	let { transactions, deleteTransaction } = useContext(GlobalContext);
 
-	if(transactions.length == 0) return null;
+	if(transactions.length === 0) return null;
 
 	return (
 		<div className="history mt-4">

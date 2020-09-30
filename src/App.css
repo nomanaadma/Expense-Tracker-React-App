@@ -81,3 +81,6 @@
 	display: block;
 }
 
+.transaction-form .alert {
+	padding: 6px 10px;
+}
