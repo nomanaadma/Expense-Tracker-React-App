@@ -5,9 +5,11 @@ function History() {
 
 	let { transactions, deleteTransaction } = useContext(GlobalContext);
 
+	if(transactions.length == 0) return null;
+
 	return (
 		<div className="history mt-4">
-			<h5>Add New Transaction</h5>
+			<h5>History</h5>
 			<hr />
 			<ul className="list-group clearfix">
 				{transactions.map((transaction, index) => {

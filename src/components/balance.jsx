@@ -5,7 +5,7 @@ function Balance() {
 	let { transactions } = useContext(GlobalContext);
 
 	const amounts = transactions.map(transaction => transaction.amount);
-	const balance = amounts.reduce((total, item) => (total += item));
+	const balance = amounts.length ? amounts.reduce((total, item) => (total += item)) : 0;
 
 	return (
 		<div className="balance">
