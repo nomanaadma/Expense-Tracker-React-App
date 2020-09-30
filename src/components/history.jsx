@@ -3,7 +3,7 @@ import { GlobalContext } from '../context/globalStore';
 
 function History() {
 
-	let { transactions } = useContext(GlobalContext);
+	let { transactions, deleteTransaction } = useContext(GlobalContext);
 
 	return (
 		<div className="history mt-4">
@@ -20,7 +20,7 @@ function History() {
 									: "list-group-item expense-list"
 							}
 						>
-							<i className="delete">X</i>
+							<i className="delete" onClick={ () => deleteTransaction(transaction)}>X</i>
 							{transaction.desc}
 							<span className="list-amount">
 								{transaction.amount > 0 ? "+" : "-"}$

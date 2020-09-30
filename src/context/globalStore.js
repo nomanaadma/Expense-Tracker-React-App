@@ -12,26 +12,27 @@ const initialState = [
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children, className }) => {
-
 	const [state, dispatch] = useReducer(AppReducer, initialState);
 
 	function addTransaction(transactionObj) {
 		dispatch({
-			type: 'ADD_TRANSACTION',
-			payload: {
-				amount: transactionObj.amount,
-				desc: transactionObj.desc
-			}
+			type: "ADD_TRANSACTION",
+			payload: transactionObj,
+		});
+	}
+
+	function deleteTransaction(transactionObj) {
+		dispatch({
+			type: "DELETE_TRANSACTION",
+			payload: transactionObj,
 		});
 	}
 
 	return (
 		<GlobalContext.Provider
-			value={{ transactions: state, addTransaction }}
+			value={{ transactions: state, addTransaction, deleteTransaction }}
 		>
-			<div className={className}>
-				{children}
-			</div>
+			<div className={className}>{children}</div>
 		</GlobalContext.Provider>
 	);
 };
