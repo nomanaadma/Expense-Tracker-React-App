@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
-import TransactionReducer from "./transactionReducer";
+import AppReducer from "./appReducer";
 
-const initialTransaction = [
+const initialState = [
 	{ amount: 500, desc: "Cras justo odio" },
 	{ amount: -250, desc: "Dapibus ac facilisis in" },
 	{ amount: 300, desc: "Morbi leo risus" },
@@ -9,11 +9,11 @@ const initialTransaction = [
 	{ amount: 400, desc: "Vestibulum at eros" },
 ];
 
-export const TransactionContext = createContext(initialTransaction);
+export const GlobalContext = createContext(initialState);
 
-export const TransactionProvider = ({ children }) => {
+export const GlobalProvider = ({ children, className }) => {
 
-	let [state, dispatch] = useReducer(TransactionReducer, initialTransaction);
+	const [state, dispatch] = useReducer(AppReducer, initialState);
 
 	function addTransaction(transactionObj) {
 		dispatch({
@@ -26,10 +26,12 @@ export const TransactionProvider = ({ children }) => {
 	}
 
 	return (
-		<TransactionContext.Provider
+		<GlobalContext.Provider
 			value={{ transactions: state, addTransaction }}
 		>
-			{children}
-		</TransactionContext.Provider>
+			<div className={className}>
+				{children}
+			</div>
+		</GlobalContext.Provider>
 	);
 };

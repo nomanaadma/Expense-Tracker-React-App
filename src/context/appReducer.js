@@ -1,7 +1,7 @@
-const TransactionReducer = ((state, action) => {
+const AppReducer = ((state, action) => {
 
 	switch (action.type) {
-		case "ADD":
+		case "ADD_TRANSACTION":
 			return [action.payload, ...state];
 		default:
 			return state;
@@ -9,4 +9,4 @@ const TransactionReducer = ((state, action) => {
 
 });
 
-export default TransactionReducer;
+export default AppReducer;
