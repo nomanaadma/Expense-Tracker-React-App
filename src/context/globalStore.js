@@ -2,11 +2,11 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./appReducer";
 
 const initialState = [
-	{ amount: 500, desc: "Cras justo odio" },
-	{ amount: -250, desc: "Dapibus ac facilisis in" },
-	{ amount: 300, desc: "Morbi leo risus" },
-	{ amount: -100, desc: "Porta ac consectetur ac" },
-	{ amount: 400, desc: "Vestibulum at eros" },
+	// { amount: 500, desc: "Cras justo odio" },
+	// { amount: -250, desc: "Dapibus ac facilisis in" },
+	// { amount: 300, desc: "Morbi leo risus" },
+	// { amount: -100, desc: "Porta ac consectetur ac" },
+	// { amount: 400, desc: "Vestibulum at eros" },
 ];
 
 export const GlobalContext = createContext(initialState);
