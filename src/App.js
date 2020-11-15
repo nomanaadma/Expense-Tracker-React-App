@@ -5,6 +5,7 @@ import Balance from "./components/balance";
 import IncomeAndExpense from "./components/incomeAndExpense";
 import History from "./components/history";
 import TransactionForm from "./components/transactionForm";
+import Footer from "./components/Footer";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,6 +17,7 @@ function App() {
 			<IncomeAndExpense />
 			<History />
 			<TransactionForm />
+			<Footer />
 		</GlobalProvider>
 	);
 }

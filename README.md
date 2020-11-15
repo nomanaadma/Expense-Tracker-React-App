@@ -1,3 +1,11 @@
+# Covid-19 Tracker App
+
+![App Deployment to Surge](https://github.com/nomanaadma/Expense-Tracker-React-App/workflows/App%20Deployment%20to%20Surge/badge.svg)
+
+Project #1 for [Panacloud Bootcamp 2020](https://panacloud.github.io/bootcamp-2020/). Expense Tracker App built with React and context api using reducer.
+
+![demo](https://raw.githubusercontent.com/nomanaadma/Expense-Tracker-React-App/master/public/screenshot.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
