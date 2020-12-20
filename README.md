@@ -1,4 +1,4 @@
-# Covid-19 Tracker App
+# Expense Tracker App
 
 ![App Deployment to Surge](https://github.com/nomanaadma/Expense-Tracker-React-App/workflows/App%20Deployment%20to%20Surge/badge.svg)
 
